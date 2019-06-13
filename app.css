@@ -5,8 +5,13 @@ ul {
   border: 1px dotted red;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
+  /*flex-wrap: wrap: instead of items going past the screen, they will be added to a line below*/
+  /* justify-content: center: centers content horizontally in the container*/
+  justify-content: space-evenly;
+  /*justify-content: space-between: items fill the container with equil space between each item. Items on either end toch edge of container*/
+  /* justify-content: space-arount: equal space between each item.  1 half the space between edge items and container's edge */
+  /* justify-content: space-evenly: equal space between each item and the container's edge. */
+  /* centers content vertically in the container*/
   align-items: center;
   height: 200px;
 }
@@ -15,4 +20,19 @@ li {
   border: 1px solid black;
   margin: 0.5em;
   padding: 0.5em;
+}
+
+/*order: seth the order items are desplayed. Ordered items are automatically pushed right when mixed with unordered items*/
+.flex1 {
+  order: 1;
+  /*flex: rate and item will stretch when the widow changes size. flex can take in 3 arguments (growth, stretch and initial size). */
+  flex: 1 1 10em;
+  border: 3px dotted red;
+}
+
+.flex2 {
+  order: 2;
+  /*flex 2 shrinks and grows twice as fast because i'm basically saying with the '2', "shrink/grow twice"*/
+  flex: 2 2 10em;
+  border: 3px dotted blue;
 }
